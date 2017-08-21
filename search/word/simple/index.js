@@ -1,5 +1,4 @@
-let sentence = 'fulana bonita joaquina bonita';
-
+'use strict';
 /**
 * Get sufix of the target word
 */
@@ -14,7 +13,7 @@ function searchWord(i, sentence, word, char) {
   while (count >= 0) {
     count--;
     elem = sentence[count] + elem;
-    if (elem == word) {
+    if (elem === word) {
       isWord = true;
       break;
     }
@@ -27,15 +26,15 @@ function search(sentence, word) {
   let char = sentence[0];
   let sufixo = getSufixo(word);
   for (let i = 0; i < size; i++) {
+    char = sentence[i];
     if (char === sufixo) {
       let pos = searchWord(i, sentence, word, char);
       if (pos >= 0) {
         console.log(`WORD: ${word} | init: ${pos} | end: ${i}`);
       }
-    } else {
-      char = sentence[i];
     }
   }
 };
 
+let sentence = 'fulan bonita ... joaquina bonita bonita';
 search(sentence, 'bonita');
