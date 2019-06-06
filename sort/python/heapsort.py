@@ -1,5 +1,24 @@
 #!/bin/python3
 
+# orders = []
+#  time_cook = []
+#   n = len(customers)
+#    for i, j in customers:
+#         heapq.heappush(orders, i)
+#         heapq.heappush(time_cook, j)
+
+#     sum_orders = []
+#     i = 0
+#     while time_cook:
+#         smaller_time = heapq.heappop(time_cook)
+#         if (len(sum_orders) == 0):
+#             sum_orders.append(smaller_time)
+#         else:
+#             value = smaller_time + 1
+#             sum_orders.append(value)
+#     return int(sum(sum_orders)/len(sum_orders))
+
+
 from sort_tools import generate_random_list
 
 def max_heapify(a, n, i):
